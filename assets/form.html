@@ -5,6 +5,31 @@
   <link rel="stylesheet" type="text/css" href="./css/form.css">
   <link href="./img/favicon.png" rel="icon">
   <link href="./img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="./js/index.js">
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyDLkS__dW6mhMRDtGjOGDC7a9dlvZdK1zg",
+    authDomain: "utilix-2021.firebaseapp.com",
+    projectId: "utilix-2021",
+    storageBucket: "utilix-2021.appspot.com",
+    messagingSenderId: "867651849087",
+    appId: "1:867651849087:web:b1e165e7ace39bb771e84a",
+    measurementId: "G-9LJJGVBKJS"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
 </head>
 
 <body>
@@ -51,11 +76,11 @@
             <div class="formbg-inner padding-horizontal--48">
               <span class="padding-bottom--15">Sign in to your account</span>
               <form id="stripe-login">
-                <div class="field padding-bottom--24">
+                <div id="email" class="field padding-bottom--24">
                   <label for="email">Email</label>
                   <input type="email" name="email">
                 </div>
-                <div class="field padding-bottom--24">
+                <div id = "password" class="field padding-bottom--24">
                   <div class="grid--50-50">
                     <label for="password">Password</label>
                     <div class="reset-pass">
@@ -65,18 +90,27 @@
                   <input type="password" name="password">
                 </div>
                 <div class="field padding-bottom--24">
-                  <input type="submit" name="submit" value="Continue">
+                  <button>
+                    <a href="https://docs.google.com/spreadsheets/d/1VQGIKqUAAAtClHtemliS3vRFH-WzfnwU4yVriKrlMqw/edit?resourcekey#gid=424289040">
+                      Continue
+                    </a>
+                  </button>
                 </div>
-                <!-- <div class="field">
-                  <a class="ssolink" href="#">Use Google sign-on</a>
-                </div> -->
+                <div class="buttons">
+                  <div id="whenSignedOut">
+                      <button id="signInbtn">Sign in with Google</button>
+                  </div>
+                  <div id="whenSignedIn" hidden="true">
+                      <button id="signOutbtn">Sign out</button>
+                  </div>
+              </div>
               </form>
             </div>
           </div>
           <div class="footer-link padding-top--24">
-            <span>Don't have an account? <a href="./assets/signup.html">Sign up</a></span>
+            <span>Don't have an account? <a href="signup.html">Sign up</a></span>
             <div class="listing padding-top--24 padding-bottom--24 flex-flex center-center">
-              <span><a href="./assets/index.html">© Utilix</a></span>
+              <span><a href="index.html">© Utilix</a></span>
               <span><a href="index.html">Contact</a></span>
               <span><a href="#">Privacy & terms</a></span>
             </div>
