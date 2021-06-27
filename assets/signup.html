@@ -1,10 +1,10 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Utilix: Sign in</title>
-  <link rel="stylesheet" type="text/css" href="./assets/css/form.css">
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <title>Utilix: Sign Up</title>
+  <link rel="stylesheet" type="text/css" href="./css/form.css">
+  <link href="./img/favicon.png" rel="icon">
+  <link href="./img/apple-touch-icon.png" rel="apple-touch-icon">
 </head>
 
 <body>
@@ -49,23 +49,28 @@
         <div class="formbg-outer">
           <div class="formbg">
             <div class="formbg-inner padding-horizontal--48">
-              <span class="padding-bottom--15">Sign in to your account</span>
+              <span class="padding-bottom--15">Sign up a new Account</span>
               <form id="stripe-login">
                 <div class="field padding-bottom--24">
                   <label for="email">Email</label>
                   <input type="email" name="email">
                 </div>
                 <div class="field padding-bottom--24">
-                  <div class="grid--50-50">
-                    <label for="password">Password</label>
-                    <div class="reset-pass">
-                      <a href="#">Forgot your password?</a>
-                    </div>
-                  </div>
-                  <input type="password" name="password">
+                    <label for="password">Password:</label>
+                    <input type="password" name="password">
+                </div>
+                <br>
+                <div class='field padding-bottom--24'>
+                    <label for = "tel">Phone no.</label> 
+                    <input type="tel" name="tel">
+                </div>
+                <div class='field padding-bottom--24'>
+                    <label for="text">Location</label>
+                    <input type="text" name="text">
+                </div>
                 </div>
                 <div class="field padding-bottom--24">
-                  <input type="submit" name="submit" value="Continue">
+                  <input type="submit" name="submit" value="Submit">
                 </div>
                 <!-- <div class="field">
                   <a class="ssolink" href="#">Use Google sign-on</a>
@@ -73,8 +78,6 @@
               </form>
             </div>
           </div>
-          <div class="footer-link padding-top--24">
-            <span>Don't have an account? <a href="signup.html">Sign up</a></span>
             <div class="listing padding-top--24 padding-bottom--24 flex-flex center-center">
               <span><a href="index.html">© Utilix</a></span>
               <span><a href="index.html">Contact</a></span>
